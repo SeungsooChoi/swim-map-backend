@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "SwimPool" ALTER COLUMN "sigunguName" DROP NOT NULL,
+ALTER COLUMN "sigunguCode" DROP NOT NULL,
+ALTER COLUMN "inOutDoorDivName" DROP NOT NULL,
+ALTER COLUMN "manageMainName" DROP NOT NULL;

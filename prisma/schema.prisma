@@ -12,11 +12,11 @@ datasource db {
 
 model SwimPool {
   id               Int      @id @default(autoincrement())
-  sigunguName      String
-  sigunguCode      String
+  sigunguName      String?
+  sigunguCode      String?
   name             String
-  inOutDoorDivName String
-  manageMainName   String
+  inOutDoorDivName String?
+  manageMainName   String?
   contactNo        String?
   homepageAddr     String?
   divingLength     Int?

@@ -1,4 +1,7 @@
+import { PrismaClient } from "@prisma/client";
 import { ApolloServer, gql } from "apollo-server";
+
+const client = new PrismaClient();
 
 /**
  * SwimPool
@@ -26,10 +29,10 @@ import { ApolloServer, gql } from "apollo-server";
  */
 const typeDefs = gql`
   type SwimPool {
-    id: Int
+    id: Int!
     sigunguName: String
     sigunguCode: String
-    name: String
+    name: String!
     inOutDoorDivName: String
     manageMainName: String
     contactNo: String
@@ -48,33 +51,34 @@ const typeDefs = gql`
     latitude: String
     longitude: String
     remarks: String
+    createdAt: String!
+    updateAt: String!
   }
 
   type Query {
     swimPools: [SwimPool]
-    # pool: Pool
+    swimPool(id: Int!): SwimPool
   }
 
   type Mutation {
-    createSwimPool(name: String!): Boolean
-    deleteSwimPool(name: String!): Boolean
+    createSwimPool(name: String!): SwimPool
+    deleteSwimPool(id: Int!): SwimPool
   }
 `;
 
 const resolvers = {
   Query: {
-    swimPools: () => [],
-    // pool: () => ({ name }),
+    swimPools: () => client.swimPool.findMany(),
+    swimPool: (_, { id }) => client.swimPool.findUnique({ where: { id } }),
   },
   Mutation: {
-    createSwimPool: (_, { name }) => {
-      console.log(name);
-      return true;
-    },
-    deleteSwimPool: (_, { name }) => {
-      console.log(name);
-      return true;
-    },
+    createSwimPool: (_, { name }) =>
+      client.swimPool.create({
+        data: {
+          name,
+        },
+      }),
+    deleteSwimPool: (_, { id }) => client.swimPool.delete({ where: { id } }),
   },
 };
 
