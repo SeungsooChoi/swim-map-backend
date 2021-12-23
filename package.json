@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec node index.js --delay 2"
+    "dev": "nodemon --exec babel-node index --delay 2"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,9 @@
     "graphql": "^15.8.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
     "nodemon": "^2.0.15"
   }
 }
