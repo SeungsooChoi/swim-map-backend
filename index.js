@@ -1,6 +1,7 @@
 import { ApolloServer, gql } from "apollo-server";
 
 /**
+ * SwimPool
  * sigunguName : 시군구명
  * sigunguCode : 시군구코드
  * name : 시설명
@@ -24,7 +25,8 @@ import { ApolloServer, gql } from "apollo-server";
  * remarks : 비고사항
  */
 const typeDefs = gql`
-  type Pool {
+  type SwimPool {
+    id: Int
     sigunguName: String
     sigunguCode: String
     name: String
@@ -49,27 +51,27 @@ const typeDefs = gql`
   }
 
   type Query {
-    pools: [Pool]
+    swimPools: [SwimPool]
     # pool: Pool
   }
 
   type Mutation {
-    createPool(name: String!): Boolean
-    deletePool(name: String!): Boolean
+    createSwimPool(name: String!): Boolean
+    deleteSwimPool(name: String!): Boolean
   }
 `;
 
 const resolvers = {
   Query: {
-    pools: () => [],
+    swimPools: () => [],
     // pool: () => ({ name }),
   },
   Mutation: {
-    createPool: (_, { name }) => {
+    createSwimPool: (_, { name }) => {
       console.log(name);
       return true;
     },
-    deletePool: (_, { name }) => {
+    deleteSwimPool: (_, { name }) => {
       console.log(name);
       return true;
     },

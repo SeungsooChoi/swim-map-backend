@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SwimPool {
+  id               Int      @id @default(autoincrement())
+  sigunguName      String
+  sigunguCode      String
+  name             String
+  inOutDoorDivName String
+  manageMainName   String
+  contactNo        String?
+  homepageAddr     String?
+  divingLength     Int?
+  divingWidth      Int?
+  divingDepth      Int?
+  regPoolLength    Int?
+  regPoolWidth     Int?
+  regPoolLaneCnt   Int?
+  irregPoolLength  Int?
+  irregPoolWidth   Int?
+  irregPoolLaneCnt Int?
+  seatCnt          Int?
+  personCnt        Int?
+  latitude         String?
+  longitude        String?
+  remarks          String?
+  createdAt        DateTime @default(now())
+  updateAt         DateTime @updatedAt
+}
