@@ -34,5 +34,5 @@ model SwimPool {
   longitude        String?
   remarks          String?
   createdAt        DateTime @default(now())
-  updateAt         DateTime @updatedAt
+  updatedAt        DateTime @updatedAt
 }

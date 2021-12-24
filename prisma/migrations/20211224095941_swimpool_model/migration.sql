@@ -1,11 +1,11 @@
 -- CreateTable
 CREATE TABLE "SwimPool" (
     "id" SERIAL NOT NULL,
-    "sigunguName" TEXT NOT NULL,
-    "sigunguCode" TEXT NOT NULL,
+    "sigunguName" TEXT,
+    "sigunguCode" TEXT,
     "name" TEXT NOT NULL,
-    "inOutDoorDivName" TEXT NOT NULL,
-    "manageMainName" TEXT NOT NULL,
+    "inOutDoorDivName" TEXT,
+    "manageMainName" TEXT,
     "contactNo" TEXT,
     "homepageAddr" TEXT,
     "divingLength" INTEGER,
@@ -23,7 +23,7 @@ CREATE TABLE "SwimPool" (
     "longitude" TEXT,
     "remarks" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updateAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "SwimPool_pkey" PRIMARY KEY ("id")
 );
