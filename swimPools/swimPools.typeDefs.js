@@ -56,9 +56,4 @@ export default gql`
     swimPools: [SwimPool]
     swimPool(id: Int!): SwimPool
   }
-
-  type Mutation {
-    createSwimPool(name: String!): SwimPool
-    deleteSwimPool(id: Int!): SwimPool
-  }
 `;
