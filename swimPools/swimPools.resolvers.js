@@ -2,7 +2,8 @@ import client from "../client";
 
 export default {
   Query: {
-    swimPools: () => client.swimPool.findMany(),
-    swimPool: (_, { id }) => client.swimPool.findUnique({ where: { id } }),
+    swimPools: async () => await client.swimPool.findMany(),
+    swimPool: async (_, { id }) =>
+      await client.swimPool.findUnique({ where: { id } }),
   },
 };

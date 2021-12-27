@@ -7,7 +7,7 @@ export default gql`
   }
   type Mutation {
     updateSwimPool(
-      id: String!
+      id: Int!
       sigunguName: String
       sigunguCode: String
       name: String!

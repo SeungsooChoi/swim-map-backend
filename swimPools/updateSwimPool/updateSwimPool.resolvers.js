@@ -2,7 +2,7 @@ import client from "../../client";
 
 export default {
   Mutation: {
-    updateSwimPool: (
+    updateSwimPool: async (
       _,
       {
         id,
@@ -29,7 +29,7 @@ export default {
         remarks,
       }
     ) => {
-      const updateSwimPool = client.swimPool.update({
+      const updateSwimPool = await client.swimPool.update({
         where: {
           id,
         },
