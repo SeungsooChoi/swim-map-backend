@@ -34,15 +34,15 @@ export default gql`
     manageMainName: String
     contactNo: String
     homepageAddr: String
-    divingLength: Int
-    divingWidth: Int
-    divingDepth: Int
-    regPoolLength: Int
-    regPoolWidth: Int
-    regPoolLaneCnt: Int
-    irregPoolLength: Int
-    irregPoolWidth: Int
-    irregPoolLaneCnt: Int
+    divingLength: Float
+    divingWidth: Float
+    divingDepth: Float
+    regPoolLength: Float
+    regPoolWidth: Float
+    regPoolLaneCnt: Float
+    irregPoolLength: Float
+    irregPoolWidth: Float
+    irregPoolLaneCnt: Float
     seatCnt: Int
     personCnt: Int
     latitude: String
