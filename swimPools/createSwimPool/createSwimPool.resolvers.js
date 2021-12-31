@@ -25,6 +25,7 @@ export default {
         personCnt,
         latitude,
         longitude,
+        address,
         remarks,
       }
     ) => {
@@ -62,6 +63,7 @@ export default {
             personCnt,
             latitude,
             longitude,
+            address,
             remarks,
           },
         });

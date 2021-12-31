@@ -22,6 +22,7 @@ import { gql } from "apollo-server";
  * personCnt : 수용인원수(명)
  * latitude : 위도
  * longitude : 경도
+ * address : 주소
  * remarks : 비고사항
  */
 export default gql`
@@ -48,6 +49,7 @@ export default gql`
     latitude: String
     longitude: String
     remarks: String
+    address: String
     createdAt: String!
     updatedAt: String!
   }
