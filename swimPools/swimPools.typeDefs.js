@@ -48,8 +48,9 @@ export default gql`
     personCnt: Int
     latitude: String
     longitude: String
+    lotNoAddr: String
+    roadNmAddr: String
     remarks: String
-    address: String
     createdAt: String!
     updatedAt: String!
   }

@@ -26,7 +26,8 @@ export default {
         personCnt,
         latitude,
         longitude,
-        address,
+        lotNoAddr,
+        roadNmAddr,
         remarks,
       }
     ) => {
@@ -55,7 +56,8 @@ export default {
           personCnt,
           latitude,
           longitude,
-          address,
+          lotNoAddr,
+          roadNmAddr,
           remarks,
         },
       });

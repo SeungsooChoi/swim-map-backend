@@ -28,7 +28,8 @@ export default gql`
       personCnt: Int
       latitude: String
       longitude: String
-      address: String
+      lotNoAddr: String
+      roadNmAddr: String
       remarks: String
     ): updateSwimPoolResult!
   }
