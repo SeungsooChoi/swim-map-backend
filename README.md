@@ -12,8 +12,8 @@ Swim-map Backend.
 
 수영장 데이터 작업 후 유저가 수영장 정보 등록을 위해 필요할 때 작업 예정
 
-- [ ] Create Account
+- [x] Create Account
+- [x] See Profile
 - [ ] Login
-- [ ] See Profile
 
 - 로그인 시 기능은 장소 등록 외에는 미정
