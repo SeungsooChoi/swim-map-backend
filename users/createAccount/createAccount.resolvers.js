@@ -1,5 +1,5 @@
 import client from "../../client";
-import bcrypt, { hash } from "bcrypt";
+import bcrypt from "bcrypt";
 
 export default {
   Mutation: {

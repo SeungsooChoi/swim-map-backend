@@ -14,6 +14,6 @@ Swim-map Backend.
 
 - [x] Create Account
 - [x] See Profile
-- [ ] Login
+- [x] Login
 
 - 로그인 시 기능은 장소 등록 외에는 미정
