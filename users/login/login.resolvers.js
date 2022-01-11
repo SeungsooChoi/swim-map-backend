@@ -4,9 +4,9 @@ import jwt from "jsonwebtoken";
 
 export default {
   Mutation: {
-    login: async (_, { username, password }) => {
+    login: async (_, { email, password }) => {
       // 유저가 있는지 확인
-      const user = await client.user.findFirst({ where: { username } });
+      const user = await client.user.findFirst({ where: { email } });
       if (!user) {
         return {
           ok: false,
