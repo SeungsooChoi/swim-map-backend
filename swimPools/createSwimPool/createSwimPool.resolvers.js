@@ -41,6 +41,7 @@ export default {
         console.log(isPool);
         if (isPool) {
           throw new Error("이미 등록된 수영장입니다.");
+          // 관리자 페이지 작업할 때 화면에 표시해야 함.
         }
         await client.swimPool.create({
           data: {

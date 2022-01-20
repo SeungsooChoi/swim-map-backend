@@ -12,7 +12,8 @@ const server = new ApolloServer({
 });
 
 /**
- * return : url, server instance
+ * listen()은 Promise를 리턴하고 다음과 같은 properties를 갖고있다.
+ * url, server(서버 인스턴스)
  */
 server.listen(PORT).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
