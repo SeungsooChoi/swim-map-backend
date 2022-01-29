@@ -21,7 +21,7 @@ export default {
           error: "비밀번호가 맞지 않습니다.",
         };
       }
-      const token = await jwt.sign({ id: user.id }, process.env.SECRET_KEY);
+      const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY);
       return {
         ok: true,
         token,
