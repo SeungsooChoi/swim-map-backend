@@ -24,6 +24,7 @@ import { gql } from "apollo-server";
  * longitude : 경도
  * address : 주소
  * remarks : 비고사항
+ * registeredUser : 등록한 유저(있을경우)
  */
 export default gql`
   type SwimPool {
@@ -51,6 +52,7 @@ export default gql`
     lotNoAddr: String
     roadNmAddr: String
     remarks: String
+    registeredUser: String
     createdAt: String!
     updatedAt: String!
   }

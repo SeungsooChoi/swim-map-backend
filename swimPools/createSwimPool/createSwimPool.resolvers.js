@@ -28,6 +28,7 @@ export default {
         lotNoAddr,
         roadNmAddr,
         remarks,
+        registeredUser,
       }
     ) => {
       // 중복으로 올리는 경우를 체크.
@@ -68,6 +69,7 @@ export default {
             lotNoAddr,
             roadNmAddr,
             remarks,
+            registeredUser,
           },
         });
 

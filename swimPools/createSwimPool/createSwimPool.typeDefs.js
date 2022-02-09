@@ -30,6 +30,7 @@ export default gql`
       lotNoAddr: String
       roadNmAddr: String
       remarks: String
+      registeredUser: String
     ): createSwimPoolResult!
   }
 `;
