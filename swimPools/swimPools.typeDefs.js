@@ -53,6 +53,7 @@ export default gql`
     roadNmAddr: String
     remarks: String
     registeredUser: String
+    isShow: Boolean!
     createdAt: String!
     updatedAt: String!
   }

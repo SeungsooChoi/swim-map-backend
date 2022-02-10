@@ -70,6 +70,7 @@ export default {
             roadNmAddr,
             remarks,
             registeredUser,
+            isShow: false, // admin에서 확인 후 값을 true로 변경
           },
         });
 
