@@ -39,7 +39,7 @@ export default {
             name,
           },
         });
-        console.log(isPool);
+        console.log(`수영장 등록 여부 : ${isPool}`);
         if (isPool) {
           throw new Error("이미 등록된 수영장입니다.");
           // 관리자 페이지 작업할 때 화면에 표시해야 함.
