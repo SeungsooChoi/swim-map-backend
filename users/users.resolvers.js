@@ -9,5 +9,13 @@ export default {
       });
       return user;
     },
+    getUsers: async (_, args) => {
+      try {
+        const users = await client.user.findMany();
+        return users;
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };

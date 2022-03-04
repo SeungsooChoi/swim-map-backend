@@ -24,5 +24,6 @@ export default gql`
 
   type Query {
     seeProfile: User
+    getUsers: [User]
   }
 `;
